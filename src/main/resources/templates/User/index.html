@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+    <header th:replace="fragments :: header"></header>
+    <nav th:replace="fragments :: navigation"></nav>
+    <form action="/user/index" method="post">
+        <label>Username: <input type="text" name="username"></label>
+        <label>Password: <input type="text" name="password"></label>
+        <input type="submit" value="Log In">
+    </form>
+
+    <div th:if="loggedIn">
+        <p>You are logged in!</p>
+    </div>
+
+
+</body>
+</html>
